@@ -404,9 +404,7 @@
         const surveyLayer = new FeatureLayer({
             url: "https://services.arcgis.com/HRPe58bUyBqyyiCt/arcgis/rest/services/survey123_9d45bdacef2b4fe9aca9c26c541ac38e_results/FeatureServer"
         });
-        map.add(surveyLayer)
-
-
+        map.add(surveyLayer, "bottom-right");
 
     });
 
@@ -421,14 +419,34 @@
       margin: 0;  
       height: 100%;  
       width: 100%;  
-    }  
+    }
+
+    .addRecordBtn {
+        position: absolute;
+        z-index: 10;
+        bottom: 20px;
+        right: 10px;
+        background-color: #0079c1;
+        color: white;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        font-size: 14px;
+        cursor: pointer;
+        text-decoration: none;
+        }
+
+        .addRecordBtn:hover {
+        background-color: #005a87;
+    }
   </style> 
 
 
 </head>
 <body>
+    <a href="https://arcg.is/1TrKL51"target="_blank" class="addRecordBtn">Add Record</a>
 
-  <!-- the div to display the map-->
-  <div id="viewDiv"></div>
+    <!-- the div to display the map-->
+    <div id="viewDiv"></div>
 </body>
 </html>
